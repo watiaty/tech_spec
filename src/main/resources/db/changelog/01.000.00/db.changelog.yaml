@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - include:
+      file: create_user_table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_subscription_table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_users_subscriptions_table.sql
+      relativeToChangelogFile: true
+  - include:
+      file: insert_subscriptions.sql
+      relativeToChangelogFile: true
+
+  - changeSet:
+      id: 01.000.00
+      author: Yauheni Haikou
+      logicalFilePath: 01.000.00/db.changelog.yaml
+      changes:
+        - tagDatabase:
+            tag: 01.000.00
